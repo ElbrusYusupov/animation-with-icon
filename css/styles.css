@@ -7,81 +7,75 @@ body {
   font-family: sans-serif;
   background-color: #f9f9fd;
 }
-
-h1 {
-  text-align: center;
-  font-size: 24px;
+.img {
+  display: inline-block;
+  background-size: contain;
 }
+.product {
+  width: 370px;
 
-.box {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.product:hover .product-action {
+  opacity: 1;
+}
+.product-thumb:hover::before {
+  opacity: 1;
+}
+.product-thumb {
   position: relative;
-  width: 300px;
-  height: 300px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #bdbdbd;
-  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-
-  overflow: hidden;
-  content: "\f082";
 }
-
-.box:hover .overlay {
-  transform: translatex(0);
-}
-
-.overlay {
+.product-thumb::before {
+  display: inline-block;
   position: absolute;
   top: 0;
   left: 0;
+  content: '';
   width: 100%;
   height: 100%;
-  background-color: #3f51b5;
-
-  transform: translatex(-100%);
-  transition: transform 250ms cubic-bezier(0.47, 0, 0.745, 0.715);
-  content: "\f082";
+  background-color: rgba(255, 165, 0, 0.5);
+  opacity: 0;
 }
-
-.overlay > p {
-  color: #fff;
-  padding: 10px;
-  margin: 0;
-  font-size: 18px;
-  content: "\f082";
+.product-meta {
+  padding: 15px;
 }
-
-.overlay code {
-  display: inline-block;
-  padding: 2px 4px;
-  border-radius: 2px;
-  background-color: #fff;
-  color: #2a2a2a;
+.icon {
+  width: 32px;
+  height: 32px;
+  /* fill: rgb(194, 12, 12); */
 }
+.product-name {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.product-price {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.product-action {
+  position: absolute;
+  bottom: 50%;
+  right: 50%;
+  transform: translate(50%, 50%);
+  outline: 3px solid orange;
+  display: flex;
 
-.overlay1 {
+  opacity: 0;
+}
+.box-1 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #3f51b5;
-
-  transform: translatex(-100%);
-  transition: transform 250ms ease;
+  width: 30px;
+  height: 30px;
+  background-color: red;
 }
-
-.overlay1 > p {
-  color: #fff;
-  padding: 10px;
-  margin: 0;
-  font-size: 18px;
+.box-2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  background-color: green;
 }
-
-.overlay1 code {
-  display: inline-block;
-  padding: 2px 4px;
-  border-radius: 2px;
-  background-color: #fff;
-  color: #2a2a2a;
