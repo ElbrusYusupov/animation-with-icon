@@ -7,7 +7,147 @@ body {
   font-family: sans-serif;
   background-color: #f9f9fd;
 }
-.img {
+
+.menu,
+.submenu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: flex;
+}
+.menu-item {
+  position: relative;
+  margin-right: 15px;
+  outline: 2px solid tomato;
+}
+.menu-item:hover .submenu {
+  display: block;
+}
+.menu-link {
+  display: block;
+  padding: 10px 20px;
+
+  text-decoration: none;
+  background-color: teal;
+  color: #fff;
+}
+.submenu {
+  position: absolute;
+  left: 0;
+  top: 100%;
+
+  width: 100%;
+
+  padding-left: 15px;
+  list-style: none;
+  background-color: #ccc;
+  display: none;
+}
+.submenu a {
+  text-decoration: none;
+}
+/* .container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.box::before {
+  display: inline-block;
+  font-size: 20px;
+}
+
+.box:nth-child(1) {
+  transform: rotate(30deg);
+  background-color: orange;
+
+  animation: animate30 3000ms infinite 1000ms;
+}
+
+.box:nth-child(1)::before {
+  content: 'rotate(30deg)';
+}
+
+.box:nth-child(2) {
+  transform: rotate(115deg);
+  background-color: #03a9f4;
+
+  animation: animate115 3000ms infinite 1000ms;
+}
+
+.box:nth-child(2)::before {
+  content: 'rotate(115deg)';
+}
+
+.box:nth-child(3) {
+  transform: rotate(-45deg);
+  background-color: palevioletred;
+
+  animation: animate45 3000ms infinite 1000ms;
+}
+
+.box:nth-child(3)::before {
+  content: 'rotate(-45deg)';
+}
+
+@keyframes animate30 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(30deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes animate115 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(115deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes animate45 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(-45deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+} */
+
+/* .img {
   display: inline-block;
   background-size: contain;
 }
@@ -43,7 +183,7 @@ body {
 .icon {
   width: 32px;
   height: 32px;
-  /* fill: rgb(194, 12, 12); */
+  fill: rgb(194, 12, 12);
 }
 .product-name {
   margin-top: 0;
@@ -78,4 +218,4 @@ body {
   width: 30px;
   height: 30px;
   background-color: green;
-}
+} */ ;
