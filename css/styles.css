@@ -1,221 +1,56 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  line-height: 1.5;
-  font-family: sans-serif;
-  background-color: #f9f9fd;
-}
-
-.menu,
-.submenu {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-
-  display: flex;
-}
-.menu-item {
+.btn {
   position: relative;
-  margin-right: 15px;
-  outline: 2px solid tomato;
-}
-.menu-item:hover .submenu {
-  display: block;
-}
-.menu-link {
-  display: block;
-  padding: 10px 20px;
-
-  text-decoration: none;
-  background-color: teal;
+  display: inline-flex;
+  border: none;
+  margin: 0;
+  padding: 10px 30px;
+  border-radius: 3px;
+  background-color: #008080;
   color: #fff;
-}
-.submenu {
-  position: absolute;
-  left: 0;
-  top: 100%;
+  font: inherit;
+  cursor: pointer;
 
-  width: 100%;
-
-  padding-left: 15px;
-  list-style: none;
-  background-color: #ccc;
-  display: none;
-}
-.submenu a {
-  text-decoration: none;
-}
-/* .container {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  /* transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
 }
 
-.box {
-  width: 200px;
-  height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-}
-
-.box::before {
+.btn::before {
+  content: '';
   display: inline-block;
-  font-size: 20px;
-}
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
 
-.box:nth-child(1) {
-  transform: rotate(30deg);
-  background-color: orange;
-
-  animation: animate30 3000ms infinite 1000ms;
-}
-
-.box:nth-child(1)::before {
-  content: 'rotate(30deg)';
-}
-
-.box:nth-child(2) {
-  transform: rotate(115deg);
-  background-color: #03a9f4;
-
-  animation: animate115 3000ms infinite 1000ms;
-}
-
-.box:nth-child(2)::before {
-  content: 'rotate(115deg)';
-}
-
-.box:nth-child(3) {
-  transform: rotate(-45deg);
-  background-color: palevioletred;
-
-  animation: animate45 3000ms infinite 1000ms;
-}
-
-.box:nth-child(3)::before {
-  content: 'rotate(-45deg)';
-}
-
-@keyframes animate30 {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  50% {
-    transform: rotate(30deg);
-  }
-
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
-@keyframes animate115 {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  50% {
-    transform: rotate(115deg);
-  }
-
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
-@keyframes animate45 {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  50% {
-    transform: rotate(-45deg);
-  }
-
-  100% {
-    transform: rotate(0deg);
-  }
-} */
-
-/* .img {
-  display: inline-block;
+  background-color: red;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-image: url(../images/pdesigner.jpg);
   background-size: contain;
 }
-.product {
-  width: 370px;
-
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+.btn:hover::before {
+  transform: translateY(-35px);
 }
-.product:hover .product-action {
-  opacity: 1;
-}
-.product-thumb:hover::before {
-  opacity: 1;
-}
-.product-thumb {
-  position: relative;
-}
-.product-thumb::before {
-  display: inline-block;
+.btn::after {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 30px;
   content: '';
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 165, 0, 0.5);
-  opacity: 0;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  /* margin-right: 5px; */
+  transform: translateY(calc(-50% + 35px));
+  background-color: greenyellow;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-image: url(../images/marketing.jpg);
+  background-size: contain;
 }
-.product-meta {
-  padding: 15px;
+.btn:hover::after {
+  transform: translateY(-50%);
 }
-.icon {
-  width: 32px;
-  height: 32px;
-  fill: rgb(194, 12, 12);
+.btn:hover,
+.btn:focus {
+  background-color: lightcoral;
 }
-.product-name {
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-.product-price {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.product-action {
-  position: absolute;
-  bottom: 50%;
-  right: 50%;
-  transform: translate(50%, 50%);
-  outline: 3px solid orange;
-  display: flex;
-
-  opacity: 0;
-}
-.box-1 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 30px;
-  height: 30px;
-  background-color: red;
-}
-.box-2 {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 30px;
-  height: 30px;
-  background-color: green;
-} */ ;
